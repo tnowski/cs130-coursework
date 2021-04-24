@@ -7,30 +7,44 @@
        <link rel="stylesheet" href="style.css">
    </head>
    <body>
-       <!-- HTML content tags go here. Change anything you want! -->
-       <header>
-           <h1>My CS130 Homepage</h1>
-       </header> 
-       <main>
-            <section id="tutorials">
+       <div class="container">
+            <header class="banner">
+                <h1>My CompSci 130 Homepage</h1>
+            </header> 
+            <section class="tutorials">
                 <h2>Tutorials</h2>
-                    <p>
-                        <a href="tutorial01/index.html">tutorial01</a>
-                    </p>
-                    <p>
-                        <a href="tutorial03/index.html">tutorial03</a>
-                    </p>
+                    <ul>
+                        <li>
+                            <a href="tutorial01/index.html">Tutorial 1</a>
+                        </li>
+                        <li>
+                        <a href="tutorial03/index.html">Tutorial 3</a>
+                        </li>
+                    </ul>
             </section>
-            <section id="homework">
+            <section class="tutorial-examples">
+                Examples of tutorial work!
+            </section>
+            <section class="homework">
                 <h2>Homework</h2>
-                    <p>
-                        <a href="hw01/01_cssgrid/index.html">grid layout</a>
-                    </p>
-                    <p>
-                        <a href="hw01/02_flexbox/index.html">photo gallery</a>
-                    </p>
+                    <ul>
+                        <li>
+                            Homework 1
+                                <ul>
+                                    <li>
+                                        <a href="hw01/01_cssgrid/index.html">Grid Layout</a>
+                                    </li>
+                                    <li>
+                                        <a href="hw01/02_flexbox/index.html">Photo allery</a>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
             </section>
-            <section id="inspiration">
+            <section class="hw-examples">
+                Examples of homework!
+            </section>
+            <section class="inspiration">
                 <h2>Design Inspiration</h2>
                     <ul>
                         <li>
@@ -62,10 +76,7 @@
                             Big text, font for New York, scrolling effect
                         </li>
                     </ul>
-                <!-- 
-                    Links to 5-10 websites that inspire you
-                -->
             </section>
-        </main>
+        </div>
    </body>
 </html>

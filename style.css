@@ -1,15 +1,62 @@
 /* You're welcome to change any of this! */
+
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 * {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0px;
-    font-family: Arial, sans-serif;
+.container {
+    display: grid;
+    grid-template-columns: 33% 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr 0.75fr;
+    grid-template-areas: 
+        "a a"
+        "b ."
+        "c ."
+        "d d";
 }
 header, section {
     padding: 20px;
+    /* border: solid 1px black; */
 }
+.banner {
+    grid-area: a;
+}
+
+.tutorials {
+    grid-area: b;
+    background-color: #FEF5EF;
+}
+
+.homework {
+    grid-area: c;
+    background-color: #FEF5EF;
+}
+
+.inspiration {
+    grid-area: d;
+    background-color: #D6E3F8;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+header {
+    background-color: #E4BB97;
+    text-align: center;
+    height: 100%
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+body {
+    margin: 0px;
+    font-family: 'Domine', serif;
+}
+
 p, li {
     line-height: 1.5em;
 }
