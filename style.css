@@ -18,7 +18,6 @@
 }
 header, section {
     padding: 20px;
-    /* border: solid 1px black; */
 }
 .banner {
     grid-area: a;
@@ -50,12 +49,6 @@ header, section {
 }
 
 .image-div {
-    /* /* width: 50vw;
-    height: 50vh;
-    overflow: scroll; */
-    /* object-fit: cover;
-    width: 100%;
-    height: 250px; */
     background-size: cover;
     width: 100%;
     height: 250px;
