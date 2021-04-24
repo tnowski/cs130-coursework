@@ -12,8 +12,8 @@
     grid-template-rows: 0.25fr 1fr 1fr 0.75fr;
     grid-template-areas: 
         "a a"
-        "b ."
-        "c ."
+        "b e"
+        "c f"
         "d d";
 }
 header, section {
@@ -29,9 +29,19 @@ header, section {
     background-color: #FEF5EF;
 }
 
+.tutorial-examples {
+    grid-area: e;
+    background-color: #584B53;
+}
+
 .homework {
     grid-area: c;
     background-color: #FEF5EF;
+}
+
+.hw-examples {
+    grid-area: f;
+    background-color: #584B53;
 }
 
 .inspiration {
