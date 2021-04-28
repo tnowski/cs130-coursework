@@ -212,6 +212,7 @@ nav .selected {
     justify-content: center;
     width: 80%;
     height: 60%;
+    padding-top: 5px;
 }
 
 .artist-card > div > span {
@@ -258,12 +259,16 @@ nav .selected {
         margin: 10px 10px 10px 10px;
         padding-top: 10px;
         padding-bottom: 30px;
-        max-height: 300px;
+        max-height: 260px;
     }
 
     .artist-card > div > h3, p {
         padding-left: 15px;
-        font-size: 0.90rem;
+        font-size: 0.8rem;
+    }
+
+    .artist-card > div > span > i {
+        font-size: 0.6rem;
     }
 }
 /* I know this is bigger than mobile but I felt like it needed to transition sooner */
@@ -289,6 +294,17 @@ nav .selected {
     }
     .artist-card {
         width: 45%;
-        max-height: 320px;
+        max-height: 340px;
     }
+
+    .artist-card > div > span > i {
+        font-size: 0.7rem;
+    }
+
+@media screen and (max-width: 480px) {
+    .artist-card {
+        max-height: 310;
+    }
+}
+    
 }
