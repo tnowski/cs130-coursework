@@ -71,12 +71,13 @@ const displayAlbums = (foundAlbums) => {
 }
 
 const displayTracks = (foundTracks) => {
+
     if (foundTracks[0] == null) {
         document.querySelector('#tracks').innerHTML = "no tracks found that match your search";
     } else {
         document.querySelector('#tracks').innerHTML = " ";
         for (const item of foundTracks) {
-            template = `<section class="track-item preview" data-preview-track="${item.preview_url}">
+            template = `<section class="track-item preview" data-preview-track="${item.preview_url}" onclick="playTrack(event);">
                             <img src="${item.album.image_url}">
                             <i class="fas play-track fa-play" aria-hidden="true"></i>
                             <div class="label">
@@ -85,16 +86,25 @@ const displayTracks = (foundTracks) => {
                             </div>
                         </section>`;
             document.querySelector('#tracks').innerHTML += template;
-            item.onclick = playTrack;
     }
+    
+
 }
 }
 
-playTrack = (ev) => {
-    const queuedTrack = ev.currentTarget;
-    audioPlayer.setAudioFile(queuedTrack.preview_url);
-    audioPlayer.play();
-}
+const playTrack = (ev) => {
+
+    const elem = ev.currentTarget;
+    const previewURL = elem.dataset.previewTrack;
+    console.log(previewURL);
+    if (previewURL) {
+        audioPlayer.setAudioFile(previewURL);
+        audioPlayer.play();
+    } else {
+        console.log("There is no preview available for this track");
+    };
+    document.querySelector('footer .track-item').innerHTML = elem.innerHTML;
+};
 
 const displayArtist = (art) => {
     if (art == null) {
